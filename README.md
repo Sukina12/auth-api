@@ -11,12 +11,11 @@
 5. fill the variables of .env
 6. run the app
 
-[test Report]()
+[test Report](https://github.com/Sukina12/auth-api/actions)
 
 [deployment]()
 
-[pull request]()
-
+[pull request](https://github.com/Sukina12/auth-api/pull/1)
 
 ### Setup :
 
