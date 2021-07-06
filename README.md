@@ -1,8 +1,8 @@
 # auth-api
 
-### Auther : Sukina Abu-Hmmad
+## Auther : Sukina Abu-Hmmad
 
-### install :
+### install
 
 1. copy the link of the repo
 2. clone the repo on your local machine 3. by git clone repo-url
@@ -13,11 +13,11 @@
 
 [test Report](https://github.com/Sukina12/auth-api/actions)
 
-[deployment]()
+<!-- [deployment]() -->
 
 [pull request](https://github.com/Sukina12/auth-api/pull/1)
 
-### Setup :
+### Setup
 
 PORT - port number
 MONGODB_URL - port number
@@ -28,6 +28,6 @@ SECRET - a random string
 - Unit test: npm run test
 - Lint test: npm run lint
 
-### UML :
+### UML
 
 ![UML](UML8.PNG)
