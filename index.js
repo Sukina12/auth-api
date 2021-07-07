@@ -13,5 +13,9 @@ const options = {
   useUnifiedTopology: true,
 };
 
-mongoose.connect(process.env.MONGODB_URI, options);
-server.start (port);
+mongoose.connect(process.env.MONGODB_URI, options)
+  .then (() => {
+    server.start(port);
+  }).catch ((error) => {
+    console.log('Connection Error', error.message);
+  });

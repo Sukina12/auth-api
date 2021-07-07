@@ -35,10 +35,13 @@ app.use('/api/v2',v2Routes);
 app.get('/', (req, res) => {
   res.status(200).send('Hello from sukina !');
 });
+app.get('/bad', (req, res) => {
+  throw new Error();
+});
 
 // Catchalls
-app.use(notFound);
-app.use('*', errorHandler);
+app.use('*',notFound);
+app.use( errorHandler);
 
 module.exports = {
   server: app,
