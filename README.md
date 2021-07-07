@@ -13,7 +13,7 @@
 
 [test Report](https://github.com/Sukina12/auth-api/actions)
 
-<!-- [deployment]() -->
+[deployment](https://sukina-auth-api.herokuapp.com/)
 
 [pull request](https://github.com/Sukina12/auth-api/pull/1)
 
