@@ -36,17 +36,12 @@ describe('admin', () => {
   });
 
   it('GET all', async () => {
-    const res1 = await mockReq.post('/api/v1/food').send({
-      name: 'Mansaf',
-      calories: 1500,
-      type: 'protien',
-    }).set({ Authorization: `Bearer ${token}` });
     const res = await mockReq.get('/api/v1/food');
     expect(res.status).toEqual(200);
-    expect(res.body[1]._id).toBeDefined();
-    expect(res.body[1].name).toEqual('Mansaf');
-    expect(res.body[1].type).toEqual('PROTIEN');
-    expect(res.body.length).toEqual(2);
+    expect(res.body[0]._id).toBeDefined();
+    expect(res.body[0].name).toEqual('Salad');
+    expect(res.body[0].type).toEqual('VEGETABLE');
+    expect(res.body.length).toEqual(1);
   });
 
   it('GET one', async () => {
@@ -79,6 +74,6 @@ describe('admin', () => {
     expect(res1.status).toEqual(200);
     expect(res1.body).toEqual(null);
     const res2 = await mockReq.get('/api/v1/food/');
-    expect(res2.body.length).toEqual(1);
+    expect(res2.body.length).toEqual(0);
   });
 });
