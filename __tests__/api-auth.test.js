@@ -1,7 +1,7 @@
 'use strict';
 const supergoose = require('@code-fellows/supergoose');
 const server = require('../src/server');
-const mockReq = supergoose(server.server);
+const mockReq = supergoose(server.app);
 
 require('dotenv').config();
 

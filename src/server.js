@@ -35,16 +35,13 @@ app.use('/api/v2',v2Routes);
 app.get('/', (req, res) => {
   res.status(200).send('Hello from sukina !');
 });
-app.get('/bad', (req, res) => {
-  throw new Error();
-});
 
 // Catchalls
 app.use('*',notFound);
 app.use( errorHandler);
 
 module.exports = {
-  server: app,
+  app: app,
   start: (port) => {
     app.listen(port, () => {
       console.log(`Server Up on ${port}`);

@@ -7,13 +7,12 @@ const server = require('./src/server');
 
 const port = process.env.PORT || 5000;
 
-const options = {
+
+mongoose.connect(process.env.MONGODB_URI,{ 
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-};
-
-mongoose.connect(process.env.MONGODB_URI, options)
+})
   .then (() => {
     server.start(port);
   }).catch ((error) => {
